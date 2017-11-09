@@ -65,9 +65,12 @@ class MinHeap {
 	}
 
 	_getTail(forInsertion) {
+		if (this.size==0){
+			return undefined;
+		}
 		// get the parent of the next element to be added
 		if (forInsertion){
-			return this.search((vertex) => {return vertex.id == Math.floor((this.size+1)/2);})
+			return this.search((vertex) => {return vertex.id == Math.max(1,Math.floor((this.size+HEAP_DEGREE-1)/HEAP_DEGREE));})
 		}
 		// get the last element
 		else{
