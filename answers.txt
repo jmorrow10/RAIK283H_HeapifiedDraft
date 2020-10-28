@@ -1,0 +1,27 @@
+4) The scema of the element has itself, a parent, a child array, height, and an id
+5) The rank of the nodes
+6) Instead of swapping indexes of elements, it completly redefines the element
+7)                  1
+                   / \
+                  2   3
+                 / \ / 
+                4  5 6
+
+8)  1: Parents: Und, Children: 2,3, height: 0
+    2: Parents: 1,   Children: 4,5, height: 1
+    3: Parents: 1,   Children: 6,   height: 1
+    4: Parents: 2,   Children: Und, height: 2
+    5: Parents: 2,   Children: Und, height: 2
+    6: Parents: 3,   Children: Und, height: 2
+
+9) The insertion vertex is 7 and the removal vertex is 1
+
+10) Same without the 1 with 2 as the new parent
+
+11) 0 would be the new root
+
+12) A heap insertion
+
+13) Metric is the identity of the node to remove
+
+15) The idea of shifting nodes was interesting to wrap my head around

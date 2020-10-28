@@ -131,6 +131,13 @@ class MinHeap {
 
 	delete(metric = identity) {
 		// TODO: stub
+		console.assert(this.root !== undefined, 'Tried to dequeue from an empty MinHeap.');
+		const result = this.search(metric);
+		const tail = this._getTail(false);
+		result.swapWith(tail);
+		this._destroy(tail);
+		this._heapify(result, false);
+		return result;
 	}
 
 	search(metric) {
